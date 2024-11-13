@@ -1,3 +1,5 @@
+//array methods
+
 //forEach loop in Arrays---> its only use for array
 arr.forEach(callbackFunction)
 //CallbackFunction: Here, it is a function to execute for each element in the array
@@ -28,3 +30,57 @@ let ar = [1,2,3,4];
 ar.forEach((val)=>{
     console.log(val*val);
 })
+
+
+//map method---> Creates a new array with the results of some operation. the value its callback return are used to form new array
+//it is same as foreach but it return a array
+ //syntax-->Array.map(callbackFnx(value,index,array))
+
+let nums =[67,52,39];
+let newArr = nums.map((val)=>{
+    return val;
+})
+console.log(newArr);//output: [67,52,39]
+
+//filter method
+//creates a new array of elements that give true for a condition / filter
+let newArr1 = nums.filter((val)=>{
+    return val > 50;
+})
+console.log(newArr1);//output :[67,52]
+
+//reduce method
+//Perform some operations & reduce the array to a single value . it returns that single value
+let arr = [1,2,3,4];
+const output = arr.reduce((res,curr)=>{
+    //sum of array 
+    return res+curr;
+    //to check largest number
+    // return prev > curr ? prev :curr;
+});
+console.log(arr);//output :10
+
+//Qs. We are given array of marks of students . filter out of the marks of students that scored 90+
+let marks = [78, 90, 65, 82, 75, 95, 85];
+let newMarks = marks.filter((mark)=>{
+    return mark >= 90;
+});
+console.log(newMarks); // output: [90, 95]
+
+//Qs. take a number n as input from user. Create an array of numbers from 1 to n.
+let n = prompt("enter a nnumber");
+let arrr = [];
+for(let i=1;i<= n ; i++){
+arrr[i-1]=i;
+}
+console.log(arrr);
+//use the reduce method to calculate sum of all numbers in the array
+let num = arrr.reduce((prev,curr)=>{
+    return prev+curr;
+})
+console.log(" sum = "+ num);
+//use the reduce method to calculate product of all numbers in the array
+let product = arrr.reduce((prev,curr)=>{
+    return prev*curr;
+})
+console.log("Product of num or factorial of num = "+product);//it it also known as factorial function

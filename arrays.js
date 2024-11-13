@@ -21,7 +21,7 @@ console.log(items); // output: ['new_value', 'bar', 'baz']
 //string ---> immutable in javascript and Arrays ---> mutable in javascript
 
 //looping over arrays
-
+//for loop
 for(let i = 0; i < items.length; i++){
     console.log(items[i]);
 }
@@ -50,7 +50,6 @@ for(let i = 0; i < its.length; i++){
 console.log(its)
 
 //arrays methods
-
 //push(): add to end 
     its.push(700,800);
     console.log(its);
@@ -98,3 +97,11 @@ console.log(its)
 //sort() : sorts the elements of an array
  its.sort();
  console.log(its);
+
+
+
+//another way to  use callback function
+let calcSquare = (val)=>{
+    console.log(val*val);
+};
+ar.forEach(calcSquare);

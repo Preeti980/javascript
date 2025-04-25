@@ -25,3 +25,68 @@ console.log(c);//4
 let d=5;
 console.log(--d );//predecrement 4
 console.log(d);//4
+
+
+let mode="dark";
+let color;
+if(mode === "dark"){
+    color="black";
+    console.log(color);
+}else{
+    color="light";
+    console.log(color);
+}
+
+let num=10;
+if(num % 2 === 0){
+    console.log("number is even");
+}else{
+    console.log("Number is odd");
+}
+
+let mode ="dark";
+let color;
+
+if(mode === "dark"){
+    color = "black";
+}else if(mode === "pink"){
+    color = "pink";
+}else if(mode === "yellow"){
+    color = "yellow";
+}else{
+    color ="light";
+}
+
+//ternary operator
+//condition ? true output: false output
+let num1=num === 10?"it correct" : " it is incorrect";
+console.log(num1);
+
+
+
+//MDN Docs
+
+
+
+// alert("hello!");
+let nums = prompt("enter your number");
+if(nums % 5 === 0){
+    console.log("Number is multiple of 5");
+}else{
+    console.log("number is not multiple of 5");
+}
+
+let marks = prompt("enter your marks");
+if (marks > 80 && marks <100){
+    console.log("A");
+}else if(marks > 70 && marks <89){
+    console.log("B");
+}else if(marks >60 && marks < 69){
+console.log("C")
+}else if(marks > 50 && marks<59){
+    console.log("D");
+}else{
+    console.log("F");
+}
+
+

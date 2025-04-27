@@ -22,7 +22,7 @@ console.log(fullName);
 var age =24; // eska use nhi karte hai
 var age = 59;
 var age = 89;
-console.log(age);
+console.log(age);// o/p  89  it takes last value
 
 
 let a =23; // let a; it is also possible 

@@ -53,7 +53,7 @@ for(let i in student){ // it return key of array
 }
 
 for(let key in student){
-    console.log("key = ", key, " , value=", student[key]);
+    console.log("key = ", key, " , value=", student[key]); // yha pe student["key"] karne ki jarurat nhi hai
 }
 
 //print 1 to 100 even number
@@ -69,6 +69,7 @@ for(let i=1;i<=100;i++){
     }
 }
 
+*****
 //important
 //create a game where you start with any random game number. Ask user to keep guessing the game number unit the user enters correct value.
 let gameNumber =25;

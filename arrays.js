@@ -8,25 +8,29 @@ console.log(items.length);//length property
 //difference betwwen property and method
 // property---> give some values and method ---> kuch kam karta hai
 
-console.log(typeof items); // it always return an object
+console.log(typeof items); // it always return an object ***
 
 //arrays indices means indexs
 console.log(items[0]); // output: foo
 console.log(items[2]); // output: baz
+console.log(items[100]); // output: undefined
 
 // change values
 items[0] = 'new_value';
 console.log(items); // output: ['new_value', 'bar', 'baz']
 
 //string ---> immutable in javascript and Arrays ---> mutable in javascript
+let str = "hello";
+str[0] = "y";
+console.log(str); // output: hello  ---> no change in string  because it is immutable
 
 //looping over arrays
-//for loop
+//for loop ---> print all element of an array
 for(let i = 0; i < items.length; i++){
     console.log(items[i]);
 }
 
-//for of loop
+//for of loop ---> result will be same 
 for(let item of items){
     console.log(item);
     // console.log(item.toUpperCase())
@@ -37,7 +41,6 @@ let m = [85,97,44,37,76,60];
 let sum =0;
 for(let i =0; i<m.length;i++){
     sum += m[i];
-  
 }
 console.log("Average marks of the class = "+sum/m.length);
 

@@ -47,7 +47,7 @@ console.log("Average marks of the class = "+sum/m.length);
 //for a given array with prices of 5 items -> [250, 645 , 300 , 900, 50]
 //all items have an offer of 10% off on item . change the array to store final price after applying offer
 let its = [250, 645 , 300 , 900, 50];
-for(let i = 0; i < its.length; i++){
+for(let i = 0; i < its.length; i++){ // yha for of loop ka use nhi karenge kyu ki ye direct value return karta aur yha index ki jarurt hai esliye for loop use karenge
     its[i] = its[i] - (its[i]*0.1);
 }
 console.log(its)

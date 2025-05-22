@@ -8,7 +8,7 @@ function functionName(){
 functionName();
 
 //function with arguments---> a and b is parameter
-//parameter and aragument both are same
+
 function addNumbers(a, b){
     console.log(a + b);
 }

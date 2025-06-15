@@ -31,7 +31,7 @@ ar.forEach((val)=>{
     console.log(val*val);
 })
 
-
+//some more method
 //map method---> Creates a new array with the results of some operation. the value its callback return are used to form new array
 //it is same as foreach but it return a array
  //syntax-->Array.map(callbackFnx(value,index,array))
@@ -51,6 +51,7 @@ console.log(newArr1);//output :[67,52]
 
 //reduce method
 //Perform some operations & reduce the array to a single value . it returns that single value
+//input me bahut number hote hai but output me ek hi number ata matlab ek ya do
 let arr = [1,2,3,4];
 const output = arr.reduce((res,curr)=>{
     //sum of array 

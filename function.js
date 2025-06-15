@@ -1,50 +1,114 @@
-//block of code that performs a specific task , acn be invoked whenever needed
+
+//functions and methods
+//function ----> Block of code that performs a specific task, can be invoked whenever needed
 //function definition
 function functionName(){
-    //code to be executed when the function is invoked
-    console.log("Hello World");
+    //do some work
 }
 //function call
 functionName();
 
-//function with arguments---> a and b is parameter
-
-function addNumbers(a, b){
-    console.log(a + b);
+function myFunction(){
+    console.log("Welcome to apna college");
+    console.log("my name is priti");
 }
-addNumbers(5, 10);
+myFunction();
+// function hame repeation se bachata hai means redundancy
 
-// return value using function 
-function mulNum(a,b){
-    //a,b are local variables --> block scope
-    m = a*b;
-    console.log("before return");
-    return m;
-    console.log("after return");//this code will naver execute
+function inputPara(msg){//parameter --> input
+    console.log(msg);
 }
-console.log(mulNum(2,3)) //output--> before return 
+inputPara("hello priya");//argument
 
-//Arrow functions---> compact way of writing functions
-const addNumbersArrow = (a, b) => {
-    console.log(a + b);
+//sum of two number using function
+function sumOf(a,b){
+    console.log( a+b);
 }
-addNumbersArrow(5, 10);
+sumOf(4,5);
 
-//default parameter in function
-//without parameter of arraow function
-const printHello=() =>{
-    console.log("hello");
+// use of return in function
+function sum(a,b){
+    //local variable ->block scope hota hai means ye variable esi {} ke ander tak hi kam karenge
+    console.log("before return");// it will work
+    return a+b;
+    console.log("after return");// it will not work beacause we naver write any thing after return 
+
 }
-printHello()
+console.log(sum(78,90));
 
-//Qs. Create a function using the "function" keyword that takes a string as an argument & return the number of vowels in the string
-const countVol=(str)=>{
- let count =0;
- for(const char of str){
-    if(char === "a" || char === "e" || char === "i" || char === "o" || char === "u"){
+//Arrow Functions
+//Compact way of writing a function
+
+const functionName = (param1,param2)=>{
+    //do some work
+}
+const sum = (a,b) =>{
+    return a+b;
+}
+console.log(sum); // function definition
+console.log(sum(9,8));// actual output
+//create a function using the "function " keyword that takes a string  as an argument & returns the number of vowels in the string.
+let count =0;
+function calVowels(str){
+    for(const char of str){
+     if(char === "a"|| char === "e" || char === "i" || char === "o" || char === "u"){
         count++;
+     }
     }
- }
- console.log(count);
 }
-countVol("abcdeoo");//output --> 4
+calVowels("aascef");
+console.log(count);
+//create an arrow function to perform the same task
+let count=0;
+const countVowels = ( strs) =>{
+    for(const char of strs){
+        if(char === "a"|| char === "e" || char === "i" || char === "o" || char === "u"){
+           count++;
+        }
+       }
+}
+console.log(countVowels("priya"));
+console.log(count);
+
+//foreach loop in arrays
+Array.forEach(callbackFunction)
+//callbackFunction: Here , it is a function to execute for each element in the array
+//a callback is a function passed as an argument to another function
+
+function abc(){
+    console.log("Hello");
+}
+
+function myFunction(abc){
+    return abc;
+}
+//foreach loop in arrays
+let arr =[1,2,3,4,5];
+arr.forEach(function printVal(val){//value at each idx
+console.log(val);
+});
+let arr =[1,2,3,4,5];
+//generally use arrow function
+arr.forEach((val) => {
+    console.log(val);
+});
+
+let arr =["pune","mumbai","lucknow","colkata"];
+arr.forEach((val, idx,  arr)=>{
+    console.log(val.toUpperCase(),idx,arr);
+});
+//for interview Question -->  higher order function/method kisi dusre function ko as a parameter use kar rhe hote hai  ya fir kisi function ko return kar rhe hot hai 
+
+// question- for a given array of number the square of each value using the forEach loop
+let arr = [1,2,3,466];
+
+arr.forEach((val) =>{
+ console.log( val*val);
+});
+//another arrow function for solving same problem
+let nums = [67,52,39];
+
+let calcSquare = (num) =>{
+    console.log(num * num);
+};
+nums.forEach(calcSquare);
